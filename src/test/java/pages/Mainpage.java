@@ -34,8 +34,18 @@ public class Mainpage {
         input.click();
         input.clear();
         input.sendKeys(value);
-        System.out.print(value);
-
     }
 
+    @FindBy(xpath = "//*[@class='ng-scope']")
+    private WebElement freeSpace;
+
+    public void freeSpaceClick(){
+        freeSpace.click();
+    }
+    @FindBy(xpath = "//*[contains(.,'Сохранить')][@click-once = 'Подождите...']")
+    private WebElement saveButton;
+
+    public void clickSaveButton(){
+        saveButton.click();
+    }
 }

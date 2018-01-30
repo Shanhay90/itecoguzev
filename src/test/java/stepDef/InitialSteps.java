@@ -55,7 +55,7 @@ public class InitialSteps {
             wait = new WebDriverWait(driver,time);
         }return wait;
     }
-   // @After
+    @After
     public void closeBrowser() throws Throwable {
         Thread.sleep(3000);
         driver.close();

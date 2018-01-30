@@ -87,7 +87,7 @@ public class AuthenticationValidData {
 
     }
 
-    @Тогда("^И пользователь нажимает кнопку \"([^\"]*)\" в верхней панели таблицы$")
+    @Тогда("^пользователь нажимает кнопку \"([^\"]*)\" в верхней панели таблицы$")
     public void и_пользователь_нажимает_кнопку_в_верхней_панели_таблицы(String arg1) throws Throwable {
             InitialSteps.mainpage.clickButtonInTableSearchPanel(arg1, driver);
     }
@@ -144,6 +144,13 @@ public class AuthenticationValidData {
         for (int x= 0; x<list.size(); x++) {
             InitialSteps.mainpage.enterDataInActive(list.get(x).get(0), list.get(x).get(1), driver);
         }
+    }
+    @Когда("^пользователь кликает на свободном месте страницы$")
+    public void пользователь_кликает_на_свободном_месте_страницы() throws Throwable {
+            InitialSteps.mainpage.freeSpaceClick();
+    }
+    @Когда("^пользователь нажимает кнопку Сохранить$")public void пользователь_нажимает_кнопку_Сохранить() throws Throwable {
+        InitialSteps.mainpage.clickSaveButton();
     }
 
 }
